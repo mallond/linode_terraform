@@ -11,11 +11,11 @@ provider "linode" {
     token = "5f1eb0972c8fd58d5f12b325db18e982b4b97a2e1330715c667898b61ce72c7c"
 }
 
-resource "linode_instance" "example_instance" {
-    label = "example_instance_label"
+resource "linode_instance" "Ubuntu K8S" {
+    label = "ubuntu_k8s"
     image = "linode/ubuntu18.04"
     region = "us-central"
     type = "g6-standard-1"
     authorized_keys = ["ssh-rsa AAAA...Gw== user@example.local"]
-    root_pass = "your-root-password"
+    root_pass = "rootpassword"
 }
