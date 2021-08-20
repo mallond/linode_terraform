@@ -16,6 +16,6 @@ resource "linode_instance" "ubuntu_k8s" {
     image = "linode/ubuntu18.04"
     region = "us-central"
     type = "g6-standard-1"
-    authorized_keys = ["${local.authorized_keys}l"]
+    authorized_keys = ["${var.authorized_keys}l"]
     root_pass = "RootPassword$4"
 }
