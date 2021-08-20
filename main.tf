@@ -17,5 +17,5 @@ resource "linode_instance" "ubuntu_k8s" {
     region = "us-central"
     type = "g6-standard-1"
     authorized_keys = ["ssh-rsa AAAA...Gw== user@example.local"]
-    root_pass = "rootpassword"
+    root_pass = "RootPassword$4"
 }
