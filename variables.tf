@@ -9,4 +9,9 @@ variable "image" {
   type        = string
   default     = "linode/ubuntu18.04"
 }
+variable "type" {
+  description = "type"
+  type        = string
+  default     = "g6-standard-16"
+}
 
