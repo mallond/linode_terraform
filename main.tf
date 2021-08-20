@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "linode" {
-    token = "your-linode-api-token"
+    token = "5f1eb0972c8fd58d5f12b325db18e982b4b97a2e1330715c667898b61ce72c7c"
 }
 
 resource "linode_instance" "example_instance" {
