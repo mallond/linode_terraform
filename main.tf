@@ -15,7 +15,7 @@ resource "linode_instance" "ubuntu_k8s" {
     label = "ubuntu_k8s"
     image = var.image
     region = "us-central"
-    type = "g6-standard-1"
+    type = var.type
     authorized_keys = [""]
     root_pass = "RootPassword$4"
 }
