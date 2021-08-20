@@ -13,7 +13,7 @@ provider "linode" {
 
 resource "linode_instance" "ubuntu_k8s" {
     label = "ubuntu_k8s"
-    image = "linode/ubuntu18.04"
+    image = var.image
     region = "us-central"
     type = "g6-standard-1"
     authorized_keys = [""]
