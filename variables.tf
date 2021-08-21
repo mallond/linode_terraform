@@ -12,7 +12,7 @@ variable "image" {
 variable "type" {
   description = "type"
   type        = string
-  default     = "g6-2"
+  default     = "g6-standard-1"
 }
 
 
