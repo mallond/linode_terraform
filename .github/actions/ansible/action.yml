@@ -12,7 +12,7 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  privileged: yes
+  privileged: 'yes'
   args:
     - ${{ inputs.playbook }}
     - ${{ inputs.inventory }}
