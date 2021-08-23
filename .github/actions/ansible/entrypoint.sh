@@ -1,5 +1,4 @@
 #BASH
-Copy entrypoint.sh .github/actions/ansible
+echo "hello motto!"
 
-#POWERSHELL
-Copy-Item entrypoint.sh .github/actions/ansible
+
