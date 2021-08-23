@@ -1,7 +1,1 @@
----
-- name: This is a hello-world example
-  hosts: localhost
-  tasks:
-    - name: Echo Shell - Hello Motto.
-      shell: "Hello Motto!"
-      register: output
+
