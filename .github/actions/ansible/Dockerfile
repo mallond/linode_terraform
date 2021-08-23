@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM ubuntu:20.04
 
 COPY ./entrypoint.sh /entrypoint.sh
 
