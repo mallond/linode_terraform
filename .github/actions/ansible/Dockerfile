@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu
 
 RUN apt update
 RUN apt install snapd -y
