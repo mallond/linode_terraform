@@ -13,5 +13,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - 'playbook.yaml'
+    - 'first_playbook.yaml'
     - 'localhost'
