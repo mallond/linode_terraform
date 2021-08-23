@@ -13,5 +13,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.playbook }}
-    - ${{ inputs.inventory }}
+    - 'playbook.yaml'
+    - 'localhost'
