@@ -2,7 +2,6 @@
 - name: This is a hello-world example
   hosts: localhost
   tasks:
-    - name: Create a file called '/tmp/testfile.txt' with the content 'hello world'.
-      copy:
-        content: hello worldn
-        dest: /tmp/testfile.txt
+    - name: Echo Shell - Hello Motto.
+      shell: "Hello Motto!"
+      register: output
