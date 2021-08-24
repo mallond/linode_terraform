@@ -21,5 +21,9 @@ resource "linode_instance" "ubuntu_k8s" {
 }
 
 provisioner "local-exec" {
-  command = "echo 'hello motto!'"
+  command = <<EOT
+    touch tada.txt
+    echo "Hello Motto!"
+    touch magic.txt
+  EOT
 }
