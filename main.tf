@@ -18,7 +18,7 @@ resource "linode_instance" "ubuntu_k8s" {
     type = var.type
     authorized_keys = ["ssh-rsa AAAA...Gw== user@example.local"]
     root_pass = "RootPassword$4"
-  provisioner "remote-exec" {
+  provisioner "local-exec" {
     command = "./local-exec.sh"
   }
 }
