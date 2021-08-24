@@ -19,3 +19,11 @@ type      g6-standard-1
 > Cockpit is a web-based graphical interface for servers
 - port 9090
 - [Cockpit](https://cockpit-project.org/)
+
+## Visual Code coder-server
+> Run VS Code on any machine anywhere and access it in the browser.
+- Use Cockpit and do the follwing
+```
+$ code-server --link
+Proxying code-server, you can access your IDE at https://example.cdr.co
+```
