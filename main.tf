@@ -27,15 +27,15 @@ resource "linode_instance" "ubuntu_k8s" {
     }
   
     provisioner "file" {
-      source      = "remote-exec.sh"
-      destination = "/tmp/remote-exec.sh"
+      source      = "install_microk8s.sh"
+      destination = "/tmp/install_microk8s.sh"
     }
   
     // change permissions to executable and pipe its output into a new file
     provisioner "remote-exec" {
       inline = [
-      "chmod +x /tmp/remote-exec.sh",
-      "/tmp/remote-exec.sh",
+      "chmod +x /tmp/install_microk8s.sh",
+      "/tmp/install_microk8s.sh",
       ]
     }
 }
