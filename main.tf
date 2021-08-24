@@ -34,7 +34,7 @@ resource "linode_instance" "ubuntu_k8s" {
     // change permissions to executable and pipe its output into a new file
     provisioner "remote-exec" {
       inline = [
-      "chmod +x /tmp/remote-exec.shh",
+      "chmod +x /tmp/remote-exec.sh",
       "/tmp/remote-exec.sh",
       ]
     }
