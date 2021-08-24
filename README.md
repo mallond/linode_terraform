@@ -37,3 +37,5 @@ type      g6-standard-1
 $ code-server --link
 Proxying code-server, you can access your IDE at https://example.cdr.co
 ```
+
+![Jokes Card](https://readme-jokes.vercel.app/api)
