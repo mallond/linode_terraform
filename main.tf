@@ -20,6 +20,7 @@ resource "linode_instance" "ubuntu_k8s" {
     root_pass = "RootPassword$4"
   provisioner "local-exec" {
     command = <<EOT
+      apt update
       snap install microk8s --classic --channel=1.21/stable
       microk8s status --wait-ready
       microk8s enable dashboard dns registry helm ingress
