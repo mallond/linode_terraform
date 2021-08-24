@@ -5,6 +5,7 @@
 > Terraform – Being frugal and idempotent. Desktop development has some major dangers, snowflake settings, hanging ports, and a configuration landmine can destroy your productivity. Worst of all there is no record of your work. The frugal side is that sometimes you need a scratch pad build that you can scale without spending large amounts of money. Regardless – Do everything on the cloud. 
 
 [Terraform Cloud](https://www.terraform.io/cloud)
+> Creating a Cloud instance is as easy as 1-2-3: 1) Login to Terraform Cloud; 2) Build your machine; 3) Use the Cloud interface, and IDE – “Too Easy!”
 
 ```
 Terraform Variables
