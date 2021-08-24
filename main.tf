@@ -50,7 +50,7 @@ resource "linode_instance" "ubuntu_k8s" {
       ]
     }
   
-     provisioner "file" {
+    provisioner "file" {
       source      = "install_cockpit.sh"
       destination = "/tmp/install_cockpit.sh"
     }
