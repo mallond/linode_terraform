@@ -19,6 +19,9 @@ resource "linode_instance" "ubuntu_k8s" {
     authorized_keys = ["ssh-rsa AAAA...Gw== user@example.local"]
     root_pass = "RootPassword$4"
   provisioner "local-exec" {
+    command = "chmod 777 local-exec.sh"
+  }
+  provisioner "local-exec" {
     command = "./local-exec.sh"
   }
 }
