@@ -26,12 +26,16 @@ resource "linode_instance" "ubuntu_k8s" {
       host  = self.ip_address
     }
   
-
+    provisioner "file" {
+      source      = "remote_exec.sh"
+      destination = "/tmp/remote_exec.sh"
+    }
+  
     // change permissions to executable and pipe its output into a new file
     provisioner "remote-exec" {
       inline = [
-      "apt-get update",
-      "sudo snap install microk8s --classic --channel=1.21/stable",
+      "chmod +x /tmp/remote_exec.sh",
+      "/tmp/remote_exec.sh",
       ]
     }
 }
