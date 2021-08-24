@@ -49,6 +49,18 @@ resource "linode_instance" "ubuntu_k8s" {
       "/tmp/enable_ufw.sh",
       ]
     }
+  
+     provisioner "file" {
+      source      = "install_cockpit.sh"
+      destination = "/tmp/install_cockpit.sh"
+    }
+  
+    provisioner "remote-exec" {
+      inline = [
+      "chmod +x /tmp/install_cockpit.sh",
+      "/tmp/install_cockpit.sh",
+      ]
+    }
 }
 
 
