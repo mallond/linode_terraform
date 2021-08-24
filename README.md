@@ -1,3 +1,4 @@
+![example workflow](https://github.com/mallond/linode_terraform/actions/workflows/deploy_docker_ansible.yml/badge.svg)
 
 ![lab](https://brewminate.com/wp-content/uploads/2018/02/020918-25-History-Laboratory-Science.jpg)
 
