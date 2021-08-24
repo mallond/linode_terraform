@@ -23,7 +23,7 @@ resource "linode_instance" "ubuntu_k8s" {
       type  = "ssh"
       user  = "root"
       password = "RootPassword$4"
-      host  = self.ipaddress
+      host  = self.ip_address
     }
   
 
