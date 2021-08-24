@@ -49,4 +49,7 @@ If the CLI can open your default browser, it will do so and load an Azure sign-i
 Otherwise, open a browser page at https://aka.ms/devicelogin and enter the authorization code displayed in your terminal.
 ```
 
+## Other
+- [Free k8s Playground](https://github.com/mallond/Kubernetes-Labs-PV)
+
 ![Jokes Card](https://readme-jokes.vercel.app/api)
