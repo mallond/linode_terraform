@@ -9,7 +9,7 @@
 - Docker
 - Visual Code Cloud IDE
 - Ansible
-- 
+
 [Terraform Cloud](https://www.terraform.io/cloud)
 > Creating a Cloud instance is as easy as 1-2-3: 1) Login to Terraform Cloud; 2) Build your machine; 3) Use the Cloud interface, and IDE – “Too Easy!”
 
