@@ -38,18 +38,7 @@ resource "linode_instance" "ubuntu_k8s" {
       ]
     }
   
-    provisioner "file" {
-      source      = "enable_ufw.sh"
-      destination = "/tmp/enable_ufw.sh"
-    }
-  
-    provisioner "remote-exec" {
-      inline = [
-      "chmod +x /tmp/enable_ufw.sh",
-      "/tmp/enable_ufw.sh",
-      ]
-    }
-  
+
     provisioner "file" {
       source      = "install_cockpit.sh"
       destination = "/tmp/install_cockpit.sh"
@@ -61,6 +50,19 @@ resource "linode_instance" "ubuntu_k8s" {
       "/tmp/install_cockpit.sh",
       ]
     }
+  
+     provisioner "file" {
+      source      = "enable_ufw.sh"
+      destination = "/tmp/enable_ufw.sh"
+    }
+  
+    provisioner "remote-exec" {
+      inline = [
+      "chmod +x /tmp/enable_ufw.sh",
+      "/tmp/enable_ufw.sh",
+      ]
+    }
+  
 }
 
 
