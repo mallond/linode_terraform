@@ -1,2 +1,2 @@
 #!/bin/bash
-ufw enable
+ufw enable -y
