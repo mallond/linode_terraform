@@ -14,4 +14,8 @@ token     c243010fcc197dd571bf3c57b77b6b2bf869712bc4ebffd291e2xxxxxxx
 image     linode/ubuntu18.04	
 type      g6-standard-1	
 ```
-.1.2
+
+## Cockpit
+> Cockpit is a web-based graphical interface for servers
+- port 9090
+- [Cockpit](https://cockpit-project.org/)
