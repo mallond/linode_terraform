@@ -26,17 +26,12 @@ resource "linode_instance" "ubuntu_k8s" {
       host  = "self.ipv4"
     }
   
-    // copy our example script to the server
-    provisioner "file" {
-      source      = "local-exec.sh"
-      destination = "local-exec.sh"
-    }
 
     // change permissions to executable and pipe its output into a new file
     provisioner "remote-exec" {
       inline = [
-      "chmod +x local-exec.sh",
-      "./local-exec.sh",
+      "apt-get update",
+      "sudo snap install microk8s --classic --channel=1.21/stable",
       ]
     }
 }
