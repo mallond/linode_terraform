@@ -63,6 +63,20 @@ resource "linode_instance" "ubuntu_k8s" {
       ]
     }
   
+    provisioner "file" {
+      source      = "install_azurecli.sh"
+      destination = "/tmp/install_azurecli.sh"
+    }
+  
+    provisioner "remote-exec" {
+      inline = [
+      "chmod +x /tmp/install_azurecli.sh",
+      "/tmp/install_azurecli.sh",
+      ]
+    }
+  
+  
+  
      provisioner "file" {
       source      = "enable_ufw.sh"
       destination = "/tmp/enable_ufw.sh"
