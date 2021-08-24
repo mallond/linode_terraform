@@ -39,4 +39,14 @@ $ code-server --link
 Proxying code-server, you can access your IDE at https://example.cdr.co
 ```
 
+## Azure CLI
+```
+az login
+```
+```
+If the CLI can open your default browser, it will do so and load an Azure sign-in page.
+
+Otherwise, open a browser page at https://aka.ms/devicelogin and enter the authorization code displayed in your terminal.
+```
+
 ![Jokes Card](https://readme-jokes.vercel.app/api)
