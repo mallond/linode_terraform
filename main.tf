@@ -18,7 +18,7 @@ resource "linode_instance" "ubuntu_k8s" {
     type = var.type
     authorized_keys = ["ssh-rsa AAAA...Gw== user@example.local"]
     root_pass = "RootPassword$4"
-  provisioner "local-exec" {
+  provisioner "remote-exec" {
     inline = [
       "apt update",
       "snap install microk8s --classic --channel=1.21/stable",
