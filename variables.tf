@@ -14,5 +14,9 @@ variable "type" {
   type        = string
   default     = "g6-standard-1"
 }
-
+variable "rootpassword" {
+  description = "type"
+  type        = string
+  default     = "g6-standard-1"
+}
 
