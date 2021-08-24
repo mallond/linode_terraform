@@ -18,12 +18,13 @@ resource "linode_instance" "ubuntu_k8s" {
     type = var.type
     authorized_keys = ["ssh-rsa AAAA...Gw== user@example.local"]
     root_pass = "RootPassword$4"
+  provisioner "local-exec" {
+    command = <<EOT
+      touch tada.txt
+      echo "Hello Motto!"
+      touch magic.txt
+    EOT
+  }
 }
 
-provisioner "local-exec" {
-  command = <<EOT
-    touch tada.txt
-    echo "Hello Motto!"
-    touch magic.txt
-  EOT
-}
+
