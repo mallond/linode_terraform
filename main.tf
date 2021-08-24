@@ -18,12 +18,20 @@ resource "linode_instance" "ubuntu_k8s" {
     type = var.type
     authorized_keys = ["ssh-rsa AAAA...Gw== user@example.local"]
     root_pass = "RootPassword$4"
-  provisioner "local-exec" {
-    command = "chmod 777 local-exec.sh"
-  }
-  provisioner "local-exec" {
-    command = "./local-exec.sh"
-  }
+  
+    // copy our example script to the server
+    provisioner "file" {
+      source      = "local-exec.sh"
+      destination = "local-exec.sh"
+    }
+
+    // change permissions to executable and pipe its output into a new file
+    provisioner "remote-exec" {
+      inline = [
+      "chmod +x local-exec.sh",
+      "./local-exec.sh",
+      ]
+    }
 }
 
 
