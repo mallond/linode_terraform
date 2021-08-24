@@ -31,7 +31,7 @@ type      g6-standard-1
 
 ## Cockpit
 > Cockpit is a web-based graphical interface for servers
-- port 9090
+- https://<linode-server-ip>:9090
 - [Cockpit](https://cockpit-project.org/)
 
 ## Visual Code coder-server
