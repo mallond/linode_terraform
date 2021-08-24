@@ -52,6 +52,18 @@ resource "linode_instance" "ubuntu_k8s" {
     }
   
      provisioner "file" {
+      source      = "install_code_server.sh"
+      destination = "/tmp/install_code_server.sh"
+    }
+  
+    provisioner "remote-exec" {
+      inline = [
+      "chmod +x /tmp/install_code_server.sh",
+      "/tmp/install_code_server.sh",
+      ]
+    }
+  
+     provisioner "file" {
       source      = "enable_ufw.sh"
       destination = "/tmp/enable_ufw.sh"
     }
