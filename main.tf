@@ -17,7 +17,7 @@ resource "linode_instance" "ubuntu_k8s" {
     region = "us-west"
     type = var.type
     authorized_keys = ["ssh-rsa AAAA...Gw== user@example.local"]
-    root_pass = "RootPassword$4"
+    root_pass = var.rootpassword
   
     connection {
       type  = "ssh"
