@@ -19,6 +19,13 @@ resource "linode_instance" "ubuntu_k8s" {
     authorized_keys = ["ssh-rsa AAAA...Gw== user@example.local"]
     root_pass = "RootPassword$4"
   
+    connection {
+      type  = "ssh"
+      user  = "root"
+      password = "RootPassword$4"
+      host  = "self.ipv4"
+    }
+  
     // copy our example script to the server
     provisioner "file" {
       source      = "local-exec.sh"
