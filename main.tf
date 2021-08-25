@@ -27,6 +27,18 @@ resource "linode_instance" "ubuntu_k8s" {
     }
   
     provisioner "file" {
+      source      = "install_dotnet.sh"
+      destination = "/tmp/install_dotnet.sh"
+    }
+  
+    provisioner "remote-exec" {
+      inline = [
+      "chmod +x /tmp/install_dotnet.sh",
+      "/tmp/install_dotnet.sh",
+      ]
+    }
+  
+    provisioner "file" {
       source      = "install_powershell.sh"
       destination = "/tmp/install_powershell.sh"
     }
@@ -37,6 +49,8 @@ resource "linode_instance" "ubuntu_k8s" {
       "/tmp/install_powershell.sh",
       ]
     }
+  
+  
   
     provisioner "file" {
       source      = "mount_disk.sh"
