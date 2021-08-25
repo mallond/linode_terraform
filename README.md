@@ -4,7 +4,7 @@
 
 # Development Laboratory Build via Terraform Cloud
 
-> Terraform – Being frugal and idempotent. Desktop development has some major dangers, snowflake settings, hanging ports, and a configuration landmine can destroy your productivity. Worst of all there is no record of your work. The frugal side is that sometimes you need a scratch pad build that you can scale without spending large amounts of money. Regardless – Do everything on the cloud. 
+> Terraform – Being frugal and idempotent. Desktop development has some major dangers, like snowflake settings, hanging ports, and a configuration landmine can destroy your productivity. Worst of all there is no record of your work. The frugal side is that sometimes you need a scratch pad build that you can scale without spending large amounts of money. Regardless – Do everything on the cloud. 
 
 - Microk8s Kubernetes Stack
 - Docker
