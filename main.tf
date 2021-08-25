@@ -27,6 +27,17 @@ resource "linode_instance" "ubuntu_k8s" {
     }
   
     provisioner "file" {
+      source      = "mount_disk.sh"
+      destination = "/tmp/mount_disk.sh"
+    }
+  
+    provisioner "remote-exec" {
+      inline = [
+      "chmod +x /tmp/mount_disk.sh",
+      "/tmp/mount_disk.sh",
+      ]
+    }
+    provisioner "file" {
       source      = "install_microk8s.sh"
       destination = "/tmp/install_microk8s.sh"
     }
