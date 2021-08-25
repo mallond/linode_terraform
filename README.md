@@ -11,6 +11,13 @@
 - Visual Code Cloud IDE
 - Visual Cloud Dashboard and Terminal
 - Azure CLI
+- Ansible
+- Git
+- Powershell 7
+- .Net Core
+- NodeJS
+- NVM
+
 
 [Terraform Cloud](https://www.terraform.io/cloud)  
 [Linode](https://cloud.linode.com/)
