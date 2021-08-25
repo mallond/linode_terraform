@@ -16,8 +16,7 @@ Ubuntu
 - Git
 - Powershell 7
 - .Net Core
-- NodeJS
-- NVM
+- nvm (nvm install 14)
 
 
 [Terraform Cloud](https://www.terraform.io/cloud)  
