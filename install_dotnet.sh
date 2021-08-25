@@ -1,5 +1,4 @@
 #!/bin/bash
-wget http://ftp.us.debian.org/debian/pool/main/i/icu/libicu57_57.1-6+deb9u4_amd64.deb
-dpkg -i libicu57_57.1-6+deb9u4_amd64.deb
-apt update
-apt install dotnet-sdk-3.1 -y
+snap install dotnet-sdk --classic --channel=5.0
+snap alias dotnet-sdk.dotnet dotnet
+export DOTNET_ROOT=/snap/dotnet-sdk/current
