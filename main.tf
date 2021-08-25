@@ -27,6 +27,18 @@ resource "linode_instance" "ubuntu_k8s" {
     }
   
     provisioner "file" {
+      source      = "install_powershell.sh"
+      destination = "/tmp/install_powershell.sh"
+    }
+  
+    provisioner "remote-exec" {
+      inline = [
+      "chmod +x /tmp/install_powershell.sh",
+      "/tmp/install_powershell.sh",
+      ]
+    }
+  
+    provisioner "file" {
       source      = "mount_disk.sh"
       destination = "/tmp/mount_disk.sh"
     }
