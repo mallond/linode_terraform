@@ -26,7 +26,21 @@ resource "linode_instance" "ubuntu_k8s" {
       host  = self.ip_address
     }
   
-    provisioner "file" {
+
+  
+   provisioner "file" {
+      source      = "install_nvm.sh"
+      destination = "/tmp/install_nvm.sh"
+    }
+  
+    provisioner "remote-exec" {
+      inline = [
+      "chmod +x /tmp/install_nvm.sh",
+      "/tmp/install_nvm.sh",
+      ]
+    }
+  
+   provisioner "file" {
       source      = "install_dotnet.sh"
       destination = "/tmp/install_dotnet.sh"
     }
