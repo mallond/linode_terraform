@@ -6,4 +6,5 @@ microk8s enable dashboard dns registry helm ingress prometheus grafana
 snap alias microk8s.kubectl kubectl    
 usermod -a -G microk8s root
 chown -f -R root ~/.kube
+apt install docker.io
  
