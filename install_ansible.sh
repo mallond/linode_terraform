@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo snap install ansible-kz6fittycent --edge
+sudo snap install ansible
