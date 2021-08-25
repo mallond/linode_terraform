@@ -37,6 +37,19 @@ resource "linode_instance" "ubuntu_k8s" {
       "/tmp/mount_disk.sh",
       ]
     }
+  
+    provisioner "file" {
+      source      = "install_ansible.sh"
+      destination = "/tmp/install_ansible.sh"
+    }
+  
+    provisioner "remote-exec" {
+      inline = [
+      "chmod +x /tmp/install_ansible.sh",
+      "/tmp/install_ansible.sh",
+      ]
+    } 
+  
     provisioner "file" {
       source      = "install_microk8s.sh"
       destination = "/tmp/install_microk8s.sh"
@@ -85,8 +98,6 @@ resource "linode_instance" "ubuntu_k8s" {
       "/tmp/install_azurecli.sh",
       ]
     }
-  
-  
   
      provisioner "file" {
       source      = "enable_ufw.sh"
