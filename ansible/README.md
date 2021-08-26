@@ -1,3 +1,20 @@
+Server Host Setup
+Step 1 - Client side SSH Keygen
+```
+ssh-keygen
+```
+Step 2 - Copy key to host servers
+```
+ssh-copy-id cloud_user@54.162.142.210
+ssh-copy-id cloud_user@54.152.95.244
+
+```
+Step 3 - Login and test your copied id
+```
+ssh cloud_user@54.162.142.210
+ssh cloud_user@54.152.95.244
+```
+
 Create our update your host file
 ```
 cat > ~/ansible/hosts << 'EOF'
