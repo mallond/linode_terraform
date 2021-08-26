@@ -14,6 +14,13 @@ Step 3 - Login and test your copied id
 ssh cloud_user@54.162.142.210
 ssh cloud_user@54.152.95.244
 ```
+Step 4 - Disable login by password, do this for each server
+```
+sudo nano /etc/ssh/sshd_config
+> PasswordAuthentication no
+sudo systemctl restart ssh
+
+```
 
 Create our update your host file
 ```
