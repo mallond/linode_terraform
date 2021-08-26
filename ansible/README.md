@@ -1,11 +1,13 @@
 Create our update your host file
 ```
 cat > ~/ansible/hosts << 'EOF'
-[ubuntu-dev]
+[nginx]
 54.162.142.210
-
-[ubuntu-db]
 54.152.95.244
+
+[hello-world]
+54.152.95.244
+
 EOF
 ```
 
