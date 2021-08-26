@@ -5,3 +5,8 @@ ubuntu-web
 ubuntu-db
 EOF
 ```
+
+
+```
+ssh-keygen -t rsa -b 4096
+```
