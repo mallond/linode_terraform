@@ -28,10 +28,6 @@ cat > ~/ansible/hosts << 'EOF'
 EOF
 ```
 
-SSH keys on each host
-```
-ssh-keygen -t rsa -b 4096
-```
 
 Exercise
 ```
